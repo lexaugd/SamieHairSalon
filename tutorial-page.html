@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/pagination.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <!--    <link rel="icon" type="image/svg+xml" href="./Proxima/publish/general/proxima-web-design-toronto.svg">     foricon-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Video Tutorials</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+</head>
+<body>
+<div  class="container-custom">
+    <header>
+        <nav id="here" class="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-grey container-custom">
+            <a class="navbar-brand-custom" href="index.html">HairBySamiiee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mr-auto">
+                    <li class="nav-item ">
+                        <a class="insta-nav-link " href="https://www.instagram.com/hairbysamiiee"><img class="instagram" src="img/icons/instagram.svg"
+                                                                 alt="best-hairstyle"> hairbysamiiee</a>
+                    </li>
+                </ul>
+                <!--                <button class="btn-login" onclick="mainApp.logOut()" >SIGN OUT</button>-->
+                <!--                <button class="btn-login" onclick="mainApp.logOut()" >SIGN OUT</button> -->
+                <button id="btnLogOut" class="btn-login">SIGN OUT</button>
+<!--                <span id="userName"></span>-->
+            </div>
+        </nav>
+    </header>
+    <section class="before-video-section container-custom">
+
+        <h1 class="text-center"> Professional hair and makeup tutorials </h1>
+        <h2 class="text-center"> Monthly and annual all-inclusive subscription plans </h2>
+        <button id="userName" class="hide"></button>
+    </section>
+</div>
+<section class="tutorials-section container-custom">
+    <img class="video-top-svg" src="img/makeup%20tutorials.svg" alt="makeup-tutorials">
+    <!--        // insert links-->
+
+    <div class="container pt-5">
+
+        <div class="hide" id="toHide" >
+            <input type="text" id="videoField" placeholder="insert video id">
+            <input type="text" id="descriptionField" placeholder="write description">
+            <button class="btn-submit" onclick="writeData()">Submit</button>
+
+        </div>
+
+        <div class="data-container row pt-5"></div>
+
+        <div id="pagination-demo1" >
+
+            <!--            <div class="col-lg-6 mb-4">-->
+            <!--                <div class="card h-100">-->
+            <!--                    <iframe class="card-img-top video_frame"  src="https://www.youtube-nocookie.com/embed/zF73lQnaJJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+            <!--                    <button class="delete_video">X</button>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+
+        </div>
+
+<!--        <div id="input1" class="row pt-5">-->
+
+<!--            &lt;!&ndash;            <div class="col-lg-6 mb-4">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <div class="card h-100">&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <iframe class="card-img-top video_frame"  src="https://www.youtube-nocookie.com/embed/zF73lQnaJJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <button class="delete_video">X</button>&ndash;&gt;-->
+<!--            &lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </div>&ndash;&gt;-->
+
+
+<!--        </div>-->
+
+
+<!--        <div id="wrapper">-->
+<!--            <section class="sizeOfSectionTest">-->
+<!--                <div class="data-container"></div>-->
+<!--                <div class="row pt-5" id="pagination-demo1"></div>-->
+
+<!--            </section>-->
+<!--        </div>-->
+
+
+
+
+
+    </div>
+</section>
+<section class="share-section">
+    <h1 class="text-center">Share with your friends</h1>
+    <h2 class="text-center"> Refer a friend and get another month for $1.99 </h2>
+</section>
+<section class="container-custom bg-bottom">
+    <h1 class="text-center">HairBySamiiee</h1>
+    <h2 class="text-center"> Professional hair styling and makeup tutorials at competitive prices </h2>
+    <div class="social-links-bottom">
+        <a href="https://www.instagram.com/hairbysamiiee" target="_blank"> <img class="instagram-bottom"
+                                                                                src="img/icons/instagram.svg"
+                                                                                alt="instagram-img"> hairbysamiiee </a>
+        <span class="divider"></span>
+        <a href="https://www.facebook.com/hairbysamiiee" target="_blank"> <img class="facebook-bottom"
+                                                                               src="img/icons/facebook.svg"
+                                                                               alt="facebook-img"> hairbysamiiee </a>
+    </div>
+    <div class="text-center">
+        <p>
+            For bookings, collabs, and more info, please contact Sammie at
+            <a href="mailto: hairbysamiiee@hotmail.com">
+                hairbysamiiee@hotmail.com
+                <hr class="hr-email-bottom">
+            </a></p>
+    </div>
+</section>
+<footer class="container-custom">
+    <p class="text-center">Copyright 2020 © Hair By Samiiee</p>
+</footer>
+<!--script start_________________________________________________________________________________________-->
+<!-- Initialize Firebase -->
+<!--<script src="/__/firebase/init.js"></script>-->
+<script src="js/jQuerry1.8.2.js"></script>
+<script src="js/index.js"></script>
+<script src="js/uploader.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    //add a realtime listener
+
+
+
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+
+
+        if (!(firebase.auth().currentUser && firebase.auth().currentUser.emailVerified)) {
+            window.location.replace('login-page.html');
+
+        }
+
+        if (firebaseUser) {
+            async function checkForSubscriptionAndAdmin() {
+                currentUser = firebaseUser.uid;
+                var userDoc = firebase.firestore().collection('customers').doc(currentUser);
+                var customerRef = userDoc.collection('subscriptions').where('status', 'in', ['active'])
+
+                try {
+                    var user = await userDoc.get();
+                    var isAdmin = user.data()['isAdmin']
+                    var SnapShotCstomerRef = await customerRef.get();
+
+                    if (SnapShotCstomerRef.empty && !isAdmin) {
+                        window.location.replace('payment-page.html');
+                    }
+                    if (isAdmin) {
+                        getData();
+                        toHide.classList.remove('hide');
+                    }
+                    if (!SnapShotCstomerRef.empty) {
+                        getDataReduced();
+                    }
+                } catch (err) {
+                    console.log('Error getting documents', err);
+                }
+            }
+
+            checkForSubscriptionAndAdmin();
+        }
+
+
+    }); //realtime listener end
+
+    //logout
+    btnLogOut.addEventListener('click', e => {
+        firebase.auth().signOut();
+    });
+
+
+</script>
+<script src="js/pagination.js"></script>
+<script src="js/paginationForTutorial.js"></script>
+
+</body>
+</html>

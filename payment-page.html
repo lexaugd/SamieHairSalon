@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/payment.css" rel="stylesheet">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--    <link rel="icon" type="image/svg+xml" href="./Proxima/publish/general/proxima-web-design-toronto.svg">     foricon-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>REGISTER</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+<!--    <script src="/__/firebase/7.17.1/firebase-auth.js"></script>-->
+<!--    <script src="/__/firebase/7.17.1/firebase-firestore.js"></script>-->
+    <!-- Initialize Firebase -->
+<!--    <script src="/__/firebase/init.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+</head>
+<style>
+    fieldset {
+        background-color: #f6f8fa;
+    }
+    #error-message {
+        color: red;
+        height: 2em;
+    }
+</style>
+<body>
+
+    <header class="container-custom">
+        <nav class="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-grey container-custom">
+            <a class="navbar-brand-custom" href="index.html">HairBySamiiee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mr-auto">
+                    <li class="nav-item " >
+                        <a class="insta-nav-link " href="https://www.instagram.com/hairbysamiiee"><img class="instagram" src="img/icons/instagram.svg" alt="best-hairstyle"> hairbysamiiee</a>
+                    </li>
+                </ul>
+
+                <button id="btnLogOut" class="btn-login">SIGN OUT</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="login-section">
+        <div class="newrow">
+            <h1><span id="userName"> </span> </h1>
+            <a href="tutorial-page.html" id="tutorialButton" class="text-center hide" >TUTORIALS</a>
+
+        </div>
+    </section>
+
+<section class="payment-sections">
+
+    <template id="product">
+        <div class="product">
+            <img src="" alt="" />
+            <h2>name</h2>
+            <p class="description">description</p>
+            <form class="product-form">
+                <label for="price">Choose pricing plan: </label>
+                <select class="custom-select" style="width:200px;" id="price" name="price"></select>
+<br>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </template>
+
+    <main>
+        <div id="subscribe">
+            <section class="products"></section>
+        </div>
+        <section id="my-subscription">
+            <p></p>
+            <h3>View invoices, update subscription & payment methods <br> or cancel anytime</h3>
+            <button id="billing-portal-button">Customer portal</button>
+        </section>
+    </main>
+
+    </section>
+
+
+
+
+
+
+<section class="container-custom bg-bottom" >
+    <h1 class="text-center">HairBySamiiee</h1>
+    <h2 class="text-center"> Professional hair styling and makeup tutorials at competitive prices </h2>
+
+<div class="social-links-bottom">
+    <a href="https://www.instagram.com/hairbysamiiee" target="_blank"> <img class="instagram-bottom" src="img/icons/instagram.svg" alt="instagram-img"> hairbysamiiee </a>
+    <span class="divider"></span>
+    <a href="https://www.facebook.com/hairbysamiiee" target="_blank">  <img class="facebook-bottom" src="img/icons/facebook.svg" alt="facebook-img"> hairbysamiiee </a>
+</div>
+<div class="text-center">
+    <p>For bookings, collabs, and more info, please contact Sammie at <a href = "mailto: hairbysamiiee@hotmail.com">hairbysamiiee@hotmail.com <hr class="hr-email-bottom"></a> </p>
+</div>
+</section>
+
+
+
+<footer class="container-custom">
+    <p class="text-center">Copyright 2020 © Hair By Samiiee</p>
+</footer>
+
+
+
+<!--script start_________________________________________________________________________________________-->
+    <!-- Initialize Firebase -->
+<!--    <script src="/__/firebase/init.js"></script>-->
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/stripe-payments.js"></script>
+
+    <script>
+
+        //add a realtime listener
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+
+            if (!(firebase.auth().currentUser && firebase.auth().currentUser.emailVerified)) {
+                window.location.replace('login-page.html');
+
+            }
+            // display button tutorials
+                async function checkForSubscriptionAndAdmin() {
+                    currentUser = firebaseUser.uid;
+                    var userDoc = firebase.firestore().collection('customers').doc(currentUser);
+                    var customerRef = userDoc
+                        .collection('subscriptions')
+                        .where('status', 'in', ['active'])
+                    try {
+                        var user = await userDoc.get();
+                        var isAdmin = user.data()['isAdmin']
+                        var SnapShotCstomerRef = await customerRef.get();
+                        if (isAdmin || !SnapShotCstomerRef.empty) {
+                            tutorialButton.classList.remove('hide');
+                        }
+                    } catch (err) {
+                        console.log('Error getting doc', err);
+                    }
+                }
+
+                checkForSubscriptionAndAdmin();
+
+
+
+        }); //realtime listener end
+
+        //logout
+        btnLogOut.addEventListener('click', e => {
+            firebase.auth().signOut();
+        });    //logout end
+
+    </script>
+    <!--    stripe-->
+
+
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--    <link rel="icon" type="image/svg+xml" href="./Proxima/publish/general/proxima-web-design-toronto.svg">     foricon-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <title>Hair By Samiiee</title>
+
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.17.1/firebase-auth.js"></script>
+    <script src="/__/firebase/7.17.1/firebase-firestore.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+
+
+
+</head>
+<body>
+<div class="bg-grey container-custom">
+    <header>
+        <nav class="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-grey container-custom">
+            <a class="navbar-brand-custom" href="index.html">HairBySamiiee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mr-auto">
+                    <li class="nav-item " >
+                        <a class="insta-nav-link " href="https://www.instagram.com/hairbysamiiee"><img class="instagram" src="img/icons/instagram.svg" alt="best-hairstyle"> hairbysamiiee</a>
+                    </li>
+                </ul>
+<!--                <button class="btn-login" >LOGIN</button>-->
+                <input id="toRemove" class="btn-login" type="button" onclick="location.href='login-page.html';" value="LOGIN" />
+                <input id="toAppear" class="btn-login hide" type="button" onclick="location.href='tutorial-page.html';" value="TUTORIALS" />
+                <button id="btnLogOut" class="btn-login">SIGN OUT</button>
+                <button id="userName" class="hide"></button>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="top-section container-custom">
+
+        <ul>
+
+            <li>
+                <h1> Professional hair and <br> makeup tutorials </h1>
+            </li>
+            <li>
+                <h2> <span class="weight-500">PROMOTION ON NOW:</span> Sign up <br class="br-appear1024"> before February 15th and get the first <br class="br-appear1024"> month for $1.99  </h2>
+            </li>
+            <li>
+                <a id="subscribeNow" href="payment-page.html" >  subscribe now </a>
+            </li>
+        </ul>
+
+
+
+    </section>
+</div>
+<section class="section2 container-custom">
+    <img class="top-img-girl-540" src="img/hair-style-girl-bg-cut.png" alt="hair-style-lessons">
+</section>
+<section class="video-section3 container-custom">
+    <!--fisrt row-->
+    <div class="flex-box-section3 ">
+<!--        <div class="border-radius-video">-->
+        <img class="bg-img-video" src="img/bgWhiteImg.jpg" alt="make-up-tutorials">
+        <iframe class="intro-video" style="background: transparent; border: 0;" src="https://www.youtube.com/embed/zF73lQnaJJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--        </div>-->
+    </div>
+    <div class="flex-box-section3">
+        <h2 class="h2-row-1">Subscribe now<br class="br-dissapear-1110"> and <span class="weight-500"> join our </span><br class="br-dissapear-1110"> community!   <span class="vertical-line-right br-dissapear-1110"> </span></h2>
+    </div>
+    <!--second row-->
+    <div class="flex-box-section3">
+        <h2 class="h2-row-2">Exclusive content from<br class="br-dissapear-1260"> <span class="weight-500">Sammie</span>, licensed hairstylist<br class="br-dissapear-1110"> and makeup artist  <span class="vertical-line-left br-dissapear-1110"> </span></h2>
+    </div>
+    <div class="flex-box-section3">
+        <img class="two-img" src="img/hair-stylist.png" alt="best-hair-stylist-toronto">
+    </div>
+</section>
+<section class="flex-sub-options-section container-custom">
+    <h1 class="text-center"> Flexible subscription options </h1>
+    <h2 class="text-center"> Monthly and annual all-inclusive subscription plans </h2>
+    <svg class="wave" viewBox="0 0 1920 225" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.54972e-05 225H1924L1924.96 19.282C1924.96 19.282 1813.37 -63.7778 1048.58 118.761C283.79 301.299 16.354 54.0513 2.88602 31.8376C-10.582 9.62393 1.54972e-05 225 1.54972e-05 225Z" fill="#FFE8E0"/> </svg>
+
+</section>
+
+<section class="cards-section container-custom">
+    <div class="flex-box-card"> <img class="styling-img" src="img/hair-styling.jpg" alt="hair-styling">
+        <p class="card-text text-1"> styling </p>
+    </div>
+    <div class="flex-box-card"> <img class="styling-img" src="img/makeup-lessons.jpg" alt="makeup-lessons">
+        <p class="card-text text-2"> makeup </p>
+    </div>
+    <div class="flex-box-card"> <img class="styling-img" src="img/coloring-lessons.jpg" alt="coloring-lessons">
+        <p class="card-text text-3"> colouring </p>
+    </div>
+
+</section>
+<section class="buttons-section container-custom">
+    <div class="buttons-flex-container">
+<button onclick="location.href='payment-page.html'" class="button-monthly"> MONTHLY: $4.99 </button>
+<button onclick="location.href='payment-page.html'" class="button-yearly"> YEARLY: $50.00 </button>
+    </div>
+
+    <h1 class="text-center weight-400"><span class="weight-500">NEW:</span> All-inclusive subscription to all three categories.</h1>
+
+
+
+</section>
+
+    <section class="container-custom bg-top" >
+        <h1 class="text-center"> TORONTO'S TOP </h1>
+        <h2 class="text-center"> Beauty Experts </h2>
+    </section>
+
+<section class="parallax-section container-custom">
+        <img class="paralax-top-img" src="img/icons/paralax-top.svg" alt="paralax-top">
+
+    <div class="paralax-middle">
+        <img class="award-img" src="img/icons/WeddingWire.png" alt="WeddingWire">
+        <img class="award-img" src="img/icons/Ruffled-Blog.png" alt="Ruffled-Blog">
+        <img class="award-img" src="img/icons/OHMA.png" alt="OHMA">
+        <img class="award-img" src="img/icons/StyleMePretty.png" alt="StyleMePretty">
+        <img class="award-img" src="img/icons/FeroceMag.png" alt="FeroceMag">
+        <img class="award-img" src="img/icons/Weddingbells.png" alt="Weddingbells">
+    </div>
+
+    <img class="paralax-bottom-img" src="img/icons/paralax-bottom.svg" alt="paralax-bottom">
+</section>
+
+</section>
+
+<section class="container-custom bg-bottom" >
+    <h1 class="text-center">HairBySamiiee</h1>
+    <h2 class="text-center"> Professional hair styling and makeup tutorials at competitive prices </h2>
+
+<div class="social-links-bottom">
+    <a href="https://www.instagram.com/hairbysamiiee" target="_blank"> <img class="instagram-bottom" src="img/icons/instagram.svg" alt="instagram-img"> hairbysamiiee </a>
+    <span class="divider"></span>
+    <a href="https://www.facebook.com/hairbysamiiee" target="_blank">  <img class="facebook-bottom" src="img/icons/facebook.svg" alt="facebook-img"> hairbysamiiee </a>
+</div>
+<div class="text-center">
+    <p>For bookings, collabs, and more info, please contact Sammie at <a href = "mailto: hairbysamiiee@hotmail.com">hairbysamiiee@hotmail.com <hr class="hr-email-bottom"></a> </p>
+</div>
+</section>
+
+
+
+<footer class="container-custom">
+    <p class="text-center">Copyright 2020 © Hair By Samiiee</p>
+</footer>
+
+
+
+
+
+
+
+
+
+<!--script start_________________________________________________________________________________________-->
+
+
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+<script>
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+
+        if ((firebase.auth().currentUser && firebase.auth().currentUser.emailVerified)) {
+            toRemove.classList.add('hide');
+            toAppear.classList.remove('hide');
+
+            document.getElementById("subscribeNow").innerHTML = "My Account";
+
+        }
+        if (!(firebase.auth().currentUser)) {
+            btnLogOut.classList.add('hide');
+            toAppear.classList.add('hide');
+            toRemove.classList.remove('hide');
+            document.getElementById("subscribeNow").innerHTML = "SUBSCRIBE NOW";
+        }
+
+
+    });
+    $(".flex-box-card").on('click', function(){
+        window.location.href = "tutorial-page.html";
+    });
+
+
+
+    </script>
+</body>
+</html>
+
+

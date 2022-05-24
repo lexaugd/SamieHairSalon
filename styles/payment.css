@@ -1,0 +1,90 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+.newrow{
+    width: auto;
+}
+
+.payment-sections{
+    margin-top: -5rem;
+    padding: 0;
+    display: block;
+    text-align: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+.payment-sections button{
+    color: white;
+    min-width: 290px;
+    padding: 0 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    background: #FFE8E0;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.payment-sections button:hover{
+    -webkit-box-shadow: 0 0 15px rgba(23, 0, 52, 0.5);
+    box-shadow: 0 0 15px rgba(23, 0, 52, 0.5);
+    opacity: 0.4;
+    background: transparent;
+    color: #280000;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/*select {*/
+/*    transition: box-shadow 0.2s ease;*/
+/*    background: none;*/
+/*    border: 5px solid #FFE8E0;*/
+/*    font-size: 1.25rem;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*select option{*/
+/*    background: #FFE8E0;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*style the items (options), including the selected item:*/
+
+
+
+
+
+
+.login-section h1{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+
+.product h2{
+    font-weight: 300;
+    font-size: 2rem;
+    color: #280000;
+}
+.product p, #my-subscription h3{
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #280000;
+}
+
+.custom-select {
+    cursor: pointer;
+}

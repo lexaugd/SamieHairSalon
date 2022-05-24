@@ -1,0 +1,217 @@
+
+.paginationjs{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+
+    margin: auto;
+
+    flex-wrap: wrap;
+    width: 350px;
+    padding-bottom: 3rem;
+}
+
+
+
+.paginationjs-pages{
+
+
+}
+.paginationjs-pages ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-align: center;
+
+    margin: auto;
+    padding: 0;
+}
+
+.paginationjs-prev, .paginationjs-next{
+cursor: pointer;
+}
+
+.J-paginationjs-page{
+
+}
+
+
+
+
+.paginationjs .paginationjs-pages li {
+    float: left;
+    border: 1px solid transparent;
+    list-style: none;
+    padding-bottom: 3rem;
+}
+
+.paginationjs .paginationjs-pages li>a {
+    min-width: 100px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    background:  #FFE8E0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #280000;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+
+
+    border: 1px solid  #FFE8E0;
+}
+
+@media screen and (max-width: 450px){
+    .paginationjs .paginationjs-pages li>a {
+        min-width: 80px;
+    }
+
+}
+@media screen and (max-width: 350px){
+    .paginationjs .paginationjs-pages li>a {
+        min-width: 50px;
+    }
+
+}
+
+.paginationjs .paginationjs-pages li>a:hover {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+.paginationjs .paginationjs-pages li.active {
+    border: 1px solid transparent;
+}
+
+.paginationjs .paginationjs-pages li.active>a {
+
+    background:  white;
+    color: #280000;
+    border: 1px solid transparent;
+}
+.paginationjs .paginationjs-pages li.active>a:hover {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+.paginationjs .paginationjs-pages li.disabled>a {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+.paginationjs .paginationjs-pages li.disabled>a:hover {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+
+
+
+.paginationjs .paginationjs-pages li.active {
+    background:  white;
+    color: #280000;
+    border: 1px solid transparent;
+}
+
+.paginationjs .paginationjs-pages li.active>a {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+
+.paginationjs .paginationjs-pages li.disabled>a {
+    background:  #FFE8E0;
+    color: #280000;
+    border: 1px solid transparent;
+}
+
+.paginationjs .paginationjs-pages li.disabled>a:hover {
+    background:  white;
+    color: #280000;
+    border: 1px solid  #FFE8E0;
+}
+
+/*.paginationjs-nav, .J-paginationjs-nav, .J-paginationjs-go-pagenumber, .J-paginationjs-go-button{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-self: center;*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    margin: auto;*/
+/*    padding: 0;*/
+/*}*/
+
+.J-paginationjs-go-pagenumber{
+    width: 100px;
+    min-width: 100px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    background: white;
+    color: #280000;
+    border: 1px solid #FFE8E0;
+    cursor: pointer;
+}
+.J-paginationjs-go-button {
+    width: 100px;
+    min-width: 100px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    background: #FFE8E0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #280000;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #FFE8E0;
+    cursor: pointer;
+
+
+}
+.J-paginationjs-go-button:hover {
+    background: white;
+    color: #280000;
+    border: 1px solid #FFE8E0;
+}
+
+.J-paginationjs-nav {
+width: 100px;
+    min-width: 100px;
+height: 28px;
+line-height: 28px;
+display: block;
+font-size: 14px;
+font-weight: 400;
+text-decoration: none;
+text-align: center;
+border-radius: 10px;
+    background: white;
+    color: #280000;
+    border: 1px solid #FFE8E0;
+}
+
+
+.J-paginationjs-go-pagenumber:focus, .J-paginationjs-go-pagenumber:active, .J-paginationjs-go-pagenumber:hover {
+    outline: none !important;
+    border: 1px solid #280000;
+    opacity: 1;
+}

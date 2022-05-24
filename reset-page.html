@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--    <link rel="icon" type="image/svg+xml" href="./Proxima/publish/general/proxima-web-design-toronto.svg">     foricon-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>RESET PASSWORD</title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+</head>
+<body>
+<header class="container-custom">
+    <nav class="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-grey container-custom">
+        <a class="navbar-brand-custom" href="index.html">HairBySamiiee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mr-auto">
+                <li class="nav-item " >
+                    <a class="insta-nav-link " href="https://www.instagram.com/hairbysamiiee"><img class="instagram" src="img/icons/instagram.svg" alt="best-hairstyle"> hairbysamiiee</a>
+                </li>
+            </ul>
+            <input class="btn-login" type="button" value="LOGIN" />
+        </div>
+    </nav>
+</header>
+<section class="login-section">
+    <div class="reset-page">
+        <p class="text-center"> Instructions: </p>
+        <p> 1. Type your previously used email. </p>
+        <p> 2. Check your mailbox to change your password. </p>
+        <p> 3. Go back to this or login page by pressing "GO BACK" when you're done. </p>
+        <p> 3. Use your new password to login, enjoy :) </p>
+        <input id="txtEmail" type="email" placeholder="email" name="email" required>
+        <button id="resetBtn" type="submit">RESET PASSWORD</button>
+        <a class="text-center" href="login-page.html">GO BACK</a>
+
+    </div>
+</section>
+<section class="container-custom bg-bottom" >
+    <h1 class="text-center">HairBySamiiee</h1>
+    <h2 class="text-center"> Professional hair styling and makeup tutorials at competitive prices </h2>
+    <div class="social-links-bottom">
+        <a href="https://www.instagram.com/hairbysamiiee" target="_blank"> <img class="instagram-bottom" src="img/icons/instagram.svg" alt="instagram-img"> hairbysamiiee </a>
+        <span class="divider"></span>
+        <a href="https://www.facebook.com/hairbysamiiee" target="_blank">  <img class="facebook-bottom" src="img/icons/facebook.svg" alt="facebook-img"> hairbysamiiee </a>
+    </div>
+    <div class="text-center">
+        <p>
+            For bookings, collabs, and more info, please contact Sammie at
+            <a href = "mailto: hairbysamiiee@hotmail.com">
+                hairbysamiiee@hotmail.com
+                <hr class="hr-email-bottom"></a> </p>
+    </div>
+</section>
+<footer class="container-custom">
+    <p class="text-center">Copyright 2020 © Hair By Samiiee</p>
+</footer>
+<!--script start_________________________________________________________________________________________-->
+<!-- Initialize Firebase -->
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+    //init firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyAMTwXtoe5czsBrBX9wjgV0A3_Zt8AF6-0",
+        authDomain: "construction-960ba.firebaseapp.com",
+        databaseURL: "https://construction-960ba.firebaseio.com",
+        projectId: "construction-960ba",
+        storageBucket: "construction-960ba.appspot.com",
+        messagingSenderId: "598301003524",
+        appId: "1:598301003524:web:4915356010b65e50a0ca51",
+        measurementId: "G-LN44DWJ8P4"
+    };
+
+
+
+
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    firebase.analytics();
+
+    //get elements
+    var txtEmail = document.getElementById("txtEmail");
+    var auth = firebase.auth();
+
+    // login event
+    resetBtn.addEventListener('click', e => {
+        //get email and pass
+        var emailAddress = txtEmail.value;
+
+        auth.sendPasswordResetEmail(emailAddress).then(function() {
+            // Email sent.
+            alert('Verification email has been sent to' + ' ' + emailAddress);
+        }).catch(function(error) {
+            // An error happened.
+            alert('Verification email has NOT been sent, this account may not exist');
+        });
+
+
+
+    }); //login end
+</script>
+</body>
+</html>
